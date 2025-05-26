@@ -6,3 +6,6 @@ troep/
 astrovaria_env/
 reboundx/
 ALMA3/
+src/ALMApy_l_data.dat
+src/ALMApy_k_data.dat
+src/ALMApy_h_data.dat
