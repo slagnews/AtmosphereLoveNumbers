@@ -1,0 +1,59 @@
+! ==========================================================================
+! ALMA configuration file
+! ==========================================================================
+!
+! ~~~~~~~~~~~~~~~~~~~~~
+! # General parameters
+! ~~~~~~~~~~~~~~~~~~~~~
+!
+ 128                        ! number of digits
+ 8                          ! order of the Gaver sequence
+!
+ Tidal                    ! LN type ('Loading' or 'Tidal')
+!
+ 2                          ! minimum degree
+ 2                        ! maximum degree
+ 1                          ! step
+!
+ log                       ! time scale ('log' / 'lin' / 'ext')
+ 2                             ! time points (minus one)
+ -3 3                      ! time range  (10^(m1:m2) kyrs)
+!
+! ~~~~~~~~~~~~~~~~~~~~~
+! # Load time history
+! ~~~~~~~~~~~~~~~~~~~~~
+!
+ step                     ! load fcn ( 'step' / 'ramp' )
+ 1.0                      ! ramp length (kyrs)
+!
+! ~~~~~~~~~~~~~~~~~~~~~
+! # Rheological model 
+! ~~~~~~~~~~~~~~~~~~~~~
+!
+ 2                             ! number of layers
+!
+ /home/nielssw/astrovaria/src/ALMApy_model.dat     ! model file name
+!
+!
+! ~~~~~~~~~~~~~~~~~~~~~
+! # Log file 
+! ~~~~~~~~~~~~~~~~~~~~~
+!
+ alma.log                   ! log file name
+!
+!
+! ~~~~~~~~~~~~~~~~~~~~~
+! # Output files 
+! ~~~~~~~~~~~~~~~~~~~~~
+!
+ Real                       ! 'Real' or 'Complex' LNs
+!
+ ln_vs_t                     ! output file format (LNs vs t or LNs vs n)
+!
+ /home/nielssw/astrovaria/src/ALMApy_h_data.dat     ! h output file name
+ /home/nielssw/astrovaria/src/ALMApy_l_data.dat     ! l output file name
+ /home/nielssw/astrovaria/src/ALMApy_k_data.dat     ! k output file name
+!
+! ==========================================================================
+! End of ALMA configuration file
+! ==========================================================================

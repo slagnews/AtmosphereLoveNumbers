@@ -1,0 +1,21 @@
+{
+    "no_digits": "number of digits",
+    "gaver_sequence_order": "order of the Gaver sequence",
+    "ln_type": "LN type ('Loading' or 'Tidal')",
+    "min_degree": "minimum degree",
+    "max_degree": "maximum degree",
+    "degree_step": "step",
+    "time_scale": "time scale ('log' / 'lin' / 'ext')",
+    "time_points_minus_one": "time points (minus one)",
+    "time_range": "time range  (10^(m1:m2) kyrs)",
+    "load_function": "load fcn ( 'step' / 'ramp' )",
+    "ramp_length": "ramp length (kyrs)",
+    "no_layers": "number of layers",
+    "model_file_path": "model file name",
+    "log_file": "log file name",
+    "ln_output_type": "'Real' or 'Complex' LNs",
+    "output_format": "output file format (LNs vs t or LNs vs n)",
+    "output_file_h": "h output file name",
+    "output_file_l": "l output file name",
+    "output_file_k": "k output file name"
+}
