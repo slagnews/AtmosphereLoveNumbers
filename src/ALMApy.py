@@ -107,7 +107,7 @@ def run_alma(radii, densities, rigidities, viscosities, model_types, show_output
 
     # Convert to numpy arrays
     if isinstance(radii, float) or isinstance(radii, int):
-        radii = [radii/2, radii]
+        radii = [radii, radii/2]
         densities = [densities]*2
         rigidities = [rigidities]*2
         viscosities = [viscosities]*2
