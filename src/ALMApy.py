@@ -81,9 +81,10 @@ def execute_alma(show_output=False, show_start_stop=True, config_file=default_co
     if show_start_stop:
         print("Done running!")
 
-def read_output(data_file=default_data_file):
+def read_output(data_file=default_data_file, complex=False):
     periods = []
     k_love_numbers = []
+    k2_imaginary = []
 
     # Read file
     with open(src_path/data_file, 'r') as file:
@@ -93,12 +94,23 @@ def read_output(data_file=default_data_file):
                 continue
             # Split and parse values
             values = line.split()
-            if len(values) == 2:
-                period = float(values[0])
-                k_val = float(values[1])
-                periods.append(period)
-                k_love_numbers.append(k_val)
-    return periods, k_love_numbers
+            if not complex:
+                if len(values) == 2:
+                    period = float(values[0])
+                    k_val = float(values[1])
+                    periods.append(period)
+                    k_love_numbers.append(k_val)
+            else:
+                if len(values) == 3:
+                    period = float(values[0])
+                    k_val = float(values[1])
+                    k2_imaginary_val = float(values[2])
+                    periods.append(period)
+                    k_love_numbers.append(k_val)
+                    k2_imaginary.append(k2_imaginary_val)
+    if not complex:
+        return periods, k_love_numbers
+    return periods, k_love_numbers, k2_imaginary
 
 def run_alma(radii, densities, rigidities, viscosities, model_types, show_output=False, show_start_stop=True):
 
